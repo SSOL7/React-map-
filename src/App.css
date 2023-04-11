@@ -111,3 +111,9 @@ input {
   border-radius: 2rem;
 }
 
+a {
+  color: #61dafb;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+

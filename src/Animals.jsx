@@ -10,7 +10,8 @@ function Animals(props) {
   return (
     <div>
         <Search searchEvent={props.searchEvent} />
-        {search_filter.map((item) => <Card
+        {search_filter.map((item) =>
+        <Card
         name={item.name}
         likes={item.likes}
         key={item.name}

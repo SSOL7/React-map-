@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Animals from './Animals.jsx';
-import Header from './Header.jsx';
-import Search from './Search.jsx';
+import Birds from './Birds.jsx';
 import { animals } from './animals'; 
 import './App.css';
 
@@ -24,10 +24,10 @@ export default class App extends Component {
 
   }
 
-  likehandler = (name, action) => {
+  likehandler = (name, click) => {
     const updatedarray = this.state.animals.map(animal => {
       if (animal.name === name) {
-        if (action === 'add') {
+        if (click === 'add') {
           return {...animal, likes: animal.likes + 1}
         } else {
           return {...animal, likes: animal.likes - 1}
@@ -36,21 +36,33 @@ export default class App extends Component {
         return animal;
       }
     });
-    this.setState({animals: updatedarray});
+    this.setState({
+      animals: updatedarray
+    });
 }
 
   render() {
     return (
+    <BrowserRouter>
       <div className='App-header'>
-        <Header />
-        <Animals
+        <nav>
+          <Link to='/'>Animals</Link>
+          <Link to='/birds'>Birds</Link>
+        </nav>
+
+      <Routes>
+        <Route path='/' element={<Animals
           data={this.state.animals}
           removecard={this.removecard}
           likehandler={this.likehandler}
           searchEvent={this.searchEvent}
           search={this.state.search}
-        />
+          />} />
+        <Route path='birds' element={<Birds />} />
+        </Routes>
+
       </div>
+    </ BrowserRouter>
     )
   }
 }
