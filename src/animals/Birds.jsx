@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { birds } from './animals'
-import Card from './Card'
-import Search from './Search'
+import { birds } from '../animals'
+import Card from '../Card'
 
 export default class Birds extends Component {
     state = {

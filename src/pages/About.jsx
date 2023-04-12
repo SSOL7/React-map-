@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink, Link } from 'react-router-dom';
-import tiger from './tiger.jpg';
-import eagle from './eagle.jpeg';
+import tiger from '../images/tiger.jpg';
+import eagle from '../images/eagle.jpeg';
 
 
 function About() {

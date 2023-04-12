@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Animals from './Animals.jsx';
-import Birds from './Birds.jsx';
-import About from './About.jsx';
-import Home from './Home.jsx';
+import Animals from './animals/Animals.jsx';
+import Birds from './animals/Birds.jsx';
+import About from './pages/About.jsx';
 import { animals, birds } from './animals'; 
 import './App.css';
 
@@ -63,7 +62,7 @@ export default class App extends Component {
           searchEvent={this.searchEvent}
           search={this.state.search}
           />} />
-          
+
         <Route path='birds' element={<Birds
           data={this.state.animals}
           removecard={this.removecard}

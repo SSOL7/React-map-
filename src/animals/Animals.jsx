@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from './Card'
-import Search from './Search'
+import Card from '../Card'
+import Search from '../Search'
 
 function Animals(props) {
     const search_filter = props.data.filter(animal => {
