@@ -112,8 +112,37 @@ input {
 }
 
 a {
-  color: #61dafb;
+  color: #fb6900;
   text-decoration: none;
   margin-right: 1rem;
+}
+
+a:hover {
+  color: #fb6900;
+  text-decoration: underline;
+}
+
+h2 {
+  color: #fb6900;
+}
+
+.image-link {
+  height: 14rem;
+  margin-bottom: 3rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 1rem;
+
+}
+
+img:hover {
+  transform: scale(1.1);
 }
 
